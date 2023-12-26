@@ -1,27 +1,28 @@
--- departments--
-INSERT INTO departments (name) VALUES
+Use test_DB
+
+INSERT INTO department (name) VALUES
 ('Sales'),
-('Marketing').
+('Marketing'),
 ('Finance');
 
--- Roles --
-INSERT INTO roles (title, salary, department_id) VALUES
+
+INSERT INTO role (title, salary, department_id) VALUES
 ('Sales Lead', 100000, 1),
 ('Salesperson', 80000, 1),
 ('Lead Engineer', 150000, 2),
 ('Software Engineer', 120000, 2),
 ('Account Manager', 160000, 3),
 ('Accountant', 125000, 3),
-('Legal Team Lead', 250000, 4),
-('Lawyer', 190000, 4);
+('Legal Team Lead', 250000, 2),
+('Lawyer', 190000, 3);
 
--- Employees --
-INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES
-('John', 'Doe', 1, NULL),
-('Mike', 'Chan', 2, 1),
-('Ashley', 'Rodriguez', 3, 1),
-('Kevin', 'Tupik', 4, 2),
-('Malia', 'Brown', 5, 2),
-('Sarah', 'Lourd', 6, 3),
-('Tom', 'Allen', 7, 3),
-('Sam', 'Carter', 8, 4);
+
+INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES
+('Monkey', 'Luffy', 1, NULL),
+('Nami', 'Chan', 2, 1),
+('Levi', 'Ackerman', 3, 1),
+('Megumi', 'Fushiguro', 3, 2),
+('Papa', 'John', 1, 2),
+('Ronald', 'MacDonald', 2, 3),
+('Burger', 'King', 1, 3),
+('Bill', 'Clinton', 2, 2);
